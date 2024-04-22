@@ -6,12 +6,11 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:58:04 by paperez-          #+#    #+#             */
-/*   Updated: 2024/03/25 18:54:54 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:07:31 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "printflib.h"
 
 static char	maphexa(unsigned int h, char c)
 {
@@ -36,7 +35,7 @@ static int	initcount(int count)
 	return (count);
 }
 
-static int	puthexa(unsigned int h, const char c, int count)
+int	ft_puthexa(unsigned int h, const char c, int count)
 {
 	unsigned int	h2;
 	char	s;
@@ -52,18 +51,18 @@ static int	puthexa(unsigned int h, const char c, int count)
 	if (h >= 16)
 	{
 		h2 = h / 16;
-		count = puthexa(h2, c, count);
+		count = ft_puthexa(h2, c, count);
 		s = maphexa(h % 16, c);
 		write (1, &s, 1);
 		count++;
 	}
 	return (count);
 }
-
+/*
 int	main()
 {
 	int c;
 	c = puthexa(0, 'X', 0);
 	printf("%i", c);
 	return (0);
-}
+}*/

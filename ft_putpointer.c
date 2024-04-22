@@ -6,14 +6,18 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:58:04 by paperez-          #+#    #+#             */
-/*   Updated: 2024/03/25 18:54:54 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:03:44 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "printflib.h"
+
 int	ft_putpointer(void *p)
 {
-	int	c;
+	uintptr_t	c;
+	int count;
 
-	c = 0;
-
+	c = (uintptr_t) p;
+	count = ft_puthexa(c, 'X', 0);
+	return (count);
 }
