@@ -6,12 +6,11 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:41:17 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 13:53:19 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:38:09 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printflib.h"
-#include <stdarg.h>
+#include "ft_printf.h"
 
 static int	ft_printp(va_list args, char c)
 {
@@ -37,9 +36,9 @@ static int	ft_printp(va_list args, char c)
 
 int	ft_printf(char *str, ...)
 {
-	va_list args;
-	int	c;
-	int	size;
+	va_list	args;
+	int		c;
+	int		size;
 
 	size = 0;
 	c = 0;
@@ -47,7 +46,10 @@ int	ft_printf(char *str, ...)
 	while (str[c] != '\0')
 	{
 		if (str[c] == '%')
-			size += ft_printp(args, str[c + 1]);
+		{
+			c++;
+			size += ft_printp(args, str[c]);
+		}	
 		else
 		{
 			ft_putchar(str[c]);
@@ -59,4 +61,8 @@ int	ft_printf(char *str, ...)
 	return (size);
 }
 
-
+int main()
+{
+	ft_printf("holabuenas el numero es %i \n %x", 4355, 15);
+	return (0);
+}

@@ -6,11 +6,11 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:32:54 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 13:54:49 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:25:28 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printflib.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {

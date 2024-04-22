@@ -6,15 +6,15 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:58:04 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 13:31:39 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:28:41 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTFLIB_H
-#define PRINTFLIB_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <unistd.h>
-#include <stdarg.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int	ft_printf(char *str, ...);
 int	ft_putnbr(int nb);

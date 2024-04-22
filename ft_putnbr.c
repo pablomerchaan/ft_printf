@@ -6,11 +6,11 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:31:20 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 14:08:09 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 14:27:14 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printflib.h"
+#include "ft_printf.h"
 
 static int	ft_negativech(int nb)
 {
@@ -30,7 +30,7 @@ static int	ft_negativech(int nb)
 
 static int	numlen(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n <= 0)
@@ -45,10 +45,10 @@ static int	numlen(int n)
 
 int	ft_putnbr(int nb)
 {
-		int		c;
+	int		c;
 	char	d[1];
 	int		e;
-	int count;
+	int		count;
 
 	e = 0;
 	count = numlen(nb);
