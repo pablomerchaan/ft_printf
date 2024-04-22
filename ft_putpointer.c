@@ -6,7 +6,7 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:58:04 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 14:25:03 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:23:44 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int	ft_putpointer(void *p)
 {
-	uintptr_t	c;
-	int			count;
+	unsigned long long	c;
+	int					count;
 
-	c = (uintptr_t) p;
-	count = ft_puthexa(c, 'X', 0);
+	c = (unsigned long long) p;
+	write (1, "0x", 2);
+	count = ft_puthexaux(c, 'x', 2);
 	return (count);
 }

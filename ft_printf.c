@@ -6,11 +6,12 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:41:17 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 14:38:09 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:36:25 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	ft_printp(va_list args, char c)
 {
@@ -22,7 +23,7 @@ static int	ft_printp(va_list args, char c)
 	else if (c == 'i' || c == 'd')
 		size += ft_putnbr(va_arg (args, int));
 	else if (c == 'c')
-		size *= ft_putchar(va_arg (args, int));
+		size += ft_putchar(va_arg (args, int));
 	else if (c == 'p')
 		size += ft_putpointer(va_arg (args, void *));
 	else if (c == 'u')
@@ -34,7 +35,7 @@ static int	ft_printp(va_list args, char c)
 	return (size);
 }
 
-int	ft_printf(char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		c;
@@ -49,7 +50,7 @@ int	ft_printf(char *str, ...)
 		{
 			c++;
 			size += ft_printp(args, str[c]);
-		}	
+		}
 		else
 		{
 			ft_putchar(str[c]);
@@ -60,9 +61,12 @@ int	ft_printf(char *str, ...)
 	va_end (args);
 	return (size);
 }
-
+/*
 int main()
 {
-	ft_printf("holabuenas el numero es %i \n %x", 4355, 15);
+	int c;
+
+	c = ft_printf("valor de mi funcion %p\n", -1);
+	printf("valor original  %p", -1);
 	return (0);
-}
+}*/

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   aux.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 17:58:04 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 16:21:23 by paperez-         ###   ########.fr       */
+/*   Created: 2024/04/22 16:40:36 by paperez-          #+#    #+#             */
+/*   Updated: 2024/04/22 17:20:46 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ static char	maphexa(unsigned int h, char c)
 	return (res);
 }
 
-int	ft_puthexa(unsigned int h, const char c, int count)
+int	ft_puthexaux(unsigned long long h, const char c, int count)
 {
-	unsigned int	h2;
-	char			s;
+	unsigned long long	h2;
+	char				s;
 
 	if (h < 16)
 	{
@@ -47,11 +47,3 @@ int	ft_puthexa(unsigned int h, const char c, int count)
 	}
 	return (count);
 }
-/*
-int	main()
-{
-	int c;
-	c = puthexa(0, 'X', 0);
-	printf("%i", c);
-	return (0);
-}*/
