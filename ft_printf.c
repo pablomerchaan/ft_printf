@@ -6,7 +6,7 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:41:17 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 16:36:25 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:52:29 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ int main()
 {
 	int c;
 
-	c = ft_printf("valor de mi funcion %p\n", -1);
-	printf("valor original  %p", -1);
+	c = ft_printf("valor de mi funcion %u\n", -1);
+	printf("valor original  %u", -1);
 	return (0);
-}*/
+}
+*/

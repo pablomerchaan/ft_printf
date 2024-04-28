@@ -6,7 +6,7 @@
 /*   By: paperez- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:40:36 by paperez-          #+#    #+#             */
-/*   Updated: 2024/04/22 17:20:46 by paperez-         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:53:48 by paperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_puthexaux(unsigned long long h, const char c, int count)
 	if (h >= 16)
 	{
 		h2 = h / 16;
-		count = ft_puthexa(h2, c, count);
+		count = ft_puthexaux(h2, c, count);
 		s = maphexa(h % 16, c);
 		write (1, &s, 1);
 		count++;
